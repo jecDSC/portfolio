@@ -9,3 +9,7 @@ nav {
    position: fixed;
    top: 0px;
 }
+
+article {
+  border-style: dotted
+}
