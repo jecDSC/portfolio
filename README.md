@@ -1,2 +1,2 @@
 # portfolio
- for lab01 in DSC106
+ for labs in DSC106
