@@ -95,4 +95,27 @@ h1 {
 
 h2 {
   line-height: 1.1;
+  font-size: 200%;
+}
+
+h3 {
+  line-height: 1.1;
+}
+
+h4 {
+  line-height: 1.1;
+}
+
+h5 {
+  line-height: 1.1;
+}
+
+h6 {
+  line-height: 1.1;
+}
+
+article.border {
+  border-style: dotted;
+  border-width: 2px;
+  padding: 10px;
 }
