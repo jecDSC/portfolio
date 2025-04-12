@@ -51,3 +51,48 @@ a:hover {
 article {
   border-style: dotted
 }
+
+form {
+  display: grid;
+  gap: 1em;
+}
+
+form label {
+  grid-column: 1 / -1;
+}
+
+form input{
+  font: inherit;
+  grid-column: 1 / -1;
+  /* display: block;
+  width: 100%;
+  box-sizing: border-box; */
+}
+
+form button {
+  grid-column: 1 / -1;
+}
+
+div.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+div.projects article {
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+
+div.projects article h2 {
+  margin: 0
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: 400%;
+}
+
+h2 {
+  line-height: 1.1;
+}
