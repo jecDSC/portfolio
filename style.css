@@ -119,3 +119,8 @@ article.border {
   border-width: 2px;
   padding: 10px;
 }
+
+a.cvproject {
+  text-decoration: none;
+  color: blue;
+}
