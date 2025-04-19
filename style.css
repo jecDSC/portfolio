@@ -1,5 +1,6 @@
 :root {
-  --color-accent: oklch(65% 50% 0)
+  --color-accent: oklch(65% 50% 0);
+  color-scheme: light dark;
 }
 
 body {
@@ -14,6 +15,8 @@ body {
 
 nav {
   display: flex;
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
 }
 
 nav ul {
@@ -38,14 +41,15 @@ nav a {
 
 nav a.current {
   border-bottom-width: 0.4em;
-  padding-bottom: 5px
+  padding-bottom: 5px;
+  background-color:oklch(0.73 0 193)
 }
 
 a:hover {
   border-bottom-width: 0.4em;
   padding-bottom: 5px;
   border-bottom-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h)
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 article {
@@ -123,4 +127,21 @@ article.border {
 a.cvproject {
   text-decoration: none;
   color: blue;
+}
+
+label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+
+option {
+  font-size: 110%;
+  font-family: inherit;
+}
+
+select {
+  size: 80%;
 }
