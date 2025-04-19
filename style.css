@@ -129,7 +129,7 @@ a.cvproject {
   color: blue;
 }
 
-label {
+label.color-scheme {
   position: absolute;
   top: 1rem;
   right: 1rem;
