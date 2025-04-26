@@ -68,3 +68,21 @@ if (localStorage.colorScheme != null) {
   document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
   console.log('color scheme changed to', localStorage.colorScheme);
 }
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(project, containerElement) {
+  containerElement.innerHTML = '';
+  const article = document.createElement('article');
+  article.innerHTML = `<h3>${project.title}</h3><img src="${project.image}" alt="${project.title}"><p>${project.description}</p>`;
+  containerElement.appendChild(article);
+}
