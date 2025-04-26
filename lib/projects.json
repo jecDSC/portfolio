@@ -1,61 +1,73 @@
 [
   {
-    "title": "Lorem ipsum dolor sit.",
+    "title": "Analysis of Fatty Recipes and User Ratings",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis distinctio provident possimus, officia cupiditate accusamus culpa totam? Modi saepe atque iure reiciendis exercitationem expedita in cupiditate dolor at, veritatis est!"
+    "description": "An exploration into the relationship between fat content of a recipe and a user's rating for the recipe."
   },
   {
-    "title": "Sunt consectetur voluptate nesciunt!",
+    "title": "Analyzing Market Housing Prices and Crime in Los Angeles",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Veniam nihil praesentium quos. Sit, commodi facilis? Repellat, labore. At quasi assumenda doloribus quam recusandae quo, perferendis, exercitationem beatae quas a mollitia amet est consectetur. Ducimus adipisci iure alias dolorum!"
+    "description": "Is there a causation between crime rates and the rent/market value of homes in Los Angeles?"
   },
   {
-    "title": "Corrupti ipsa possimus veniam.",
+    "title": "DSC 106 Project 1",
+    "year": "2024",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Porro debitis ipsum dignissimos optio ad vero error inventore animi, ipsa at labore iusto unde, nemo ullam, qui deserunt architecto aliquid. Dolore cupiditate in reprehenderit blanditiis alias unde fugiat optio."
   },
   {
-    "title": "Illo labore accusantium accusamus.",
+    "title": "DSC 106 Project 2",
+    "year": "2024",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "In nesciunt aspernatur impedit incidunt cum similique vero, magni, natus illo qui debitis, porro ea harum aliquam. Voluptate, totam, quas assumenda dicta autem itaque corporis fugit, iste reprehenderit dolores quae."
   },
   {
-    "title": "Consequatur neque dignissimos esse.",
+    "title": "Fire Emblem Heroes Summon Simulator",
+    "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisquam iure perspiciatis corrupti eaque quia delectus natus ad cumque voluptatibus impedit adipisci, maiores voluptatum! Culpa esse, deleniti veritatis quia neque at sit tempora repudiandae ducimus impedit odio labore doloremque!"
   },
   {
-    "title": "Sit eius necessitatibus odit.",
+    "title": "Exploration of Hero Stats in Fire Emblem Heroes Over the Years",
+    "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Dolor, repudiandae in accusamus non eius possimus suscipit repellendus reiciendis adipisci asperiores culpa! Hic repudiandae, sit vitae assumenda similique voluptates accusantium odit sed, natus amet rerum. Sunt ratione iste delectus!"
   },
   {
-    "title": "Repellat labore dignissimos unde?",
+    "title": "Essay for LTEA 120C",
+    "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Possimus tempora delectus libero, corporis eaque ullam explicabo ut incidunt voluptatum nisi dolores quis tenetur qui laudantium voluptatem asperiores. Ut quas corrupti similique nostrum, rem aperiam repellat repellendus officia dignissimos."
   },
   {
-    "title": "Reprehenderit impedit amet eum?",
+    "title": "Final Project, MMW 13",
+    "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Aperiam fugit sequi cum corporis nostrum ipsam voluptas. Sed, obcaecati? Vel officiis adipisci, accusamus nulla, nesciunt similique atque aliquam cupiditate ea eum repellat in dignissimos! Modi similique ipsam maxime blanditiis?"
   },
   {
-    "title": "Perspiciatis exercitationem placeat voluptate?",
+    "title": "Final Project, MMW 14",
+    "year": "2021",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Optio ab placeat ratione illum consectetur reprehenderit repellat laudantium, sunt in excepturi maiores, officiis, facilis nihil quo quas! Voluptates ipsa minima quia quae aliquid enim blanditiis voluptatem totam, temporibus hic."
   },
   {
-    "title": "Facilis quo nostrum vitae.",
+    "title": "Final Project, MMW 15",
+    "year": "2021",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Sequi facilis quam numquam hic, exercitationem, repellendus nostrum nobis suscipit ullam aut, tempora cumque quas soluta! Aspernatur facere doloremque minus vel animi maxime molestiae odio repellat omnis. Expedita, dicta repellat?"
   },
   {
-    "title": "Sed rem maxime ipsa.",
+    "title": "scratch.mit.edu Projects",
+    "year": "2020",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Laborum alias voluptatem ducimus laudantium reiciendis iste deleniti tenetur cum impedit mollitia, dolores, recusandae molestias? Aspernatur impedit, voluptatibus voluptatem ratione fugit totam at alias sit, quae accusantium, aperiam porro quibusdam."
   },
   {
     "title": "Expedita ratione corporis dolores!",
+    "year": "2020",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Dolore quae rerum, iusto obcaecati debitis tempore aut adipisci sit tenetur quod ipsam commodi facere esse labore autem culpa suscipit dicta ab qui. Molestias vero perferendis accusantium cupiditate blanditiis quas."
   }
