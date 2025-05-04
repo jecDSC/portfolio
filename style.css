@@ -166,3 +166,34 @@ dd.stats {
   grid-row: 2 / span 1;
   margin-left: 0;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+span.swatch {
+  display: inline-flex;
+  height: 25px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  /* background-color: #e15759; */
+}
+
+ul.legend {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+}
+
+li.legend-items {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+div.container {
+  display: flex;
+}
