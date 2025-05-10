@@ -197,3 +197,59 @@ li.legend-items {
 div.container {
   display: flex;
 }
+
+dt.stats2 {
+  font: inherit;
+  font-size: 100%;
+  font-weight: 600;
+  grid-row: 1 / span 1;
+}
+
+dd.stats2 {
+  font: inherit;
+  font-size: 100%;
+  font-weight: 500;
+  grid-row: 2 / span 1;
+  margin-left: 0;
+}
+
+g.gridlines {
+  opacity: 40%;
+}
+
+dl.info {
+  display: grid;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+dl#commit-tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: -10px -5px 15px rgb(141, 141, 141);;
+  border-radius: 5%;
+  padding: 5px;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
