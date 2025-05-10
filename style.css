@@ -253,3 +253,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
   opacity: 0;
   visibility: hidden;
 }
+
+circle.selected {
+  fill: #ff6b6b;
+}
