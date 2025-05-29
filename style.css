@@ -4,14 +4,14 @@
 }
 
 body {
-    /* Set line height to 1.5 times the font size
+  /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin-inline: auto;
-    padding: 10px;
-  }
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 10px;
+}
 
 nav {
   display: flex;
@@ -42,7 +42,7 @@ nav a {
 nav a.current {
   border-bottom-width: 0.4em;
   padding-bottom: 5px;
-  background-color:oklch(0.73 0 193)
+  background-color: oklch(0.73 0 193);
 }
 
 a:hover {
@@ -53,7 +53,7 @@ a:hover {
 }
 
 article {
-  border-style: dotted
+  border-style: dotted;
 }
 
 form {
@@ -65,7 +65,7 @@ form label {
   grid-column: 1 / -1;
 }
 
-form input{
+form input {
   font: inherit;
   grid-column: 1 / -1;
   /* display: block;
@@ -89,7 +89,7 @@ div.projects article {
 }
 
 div.projects article h2 {
-  margin: 0
+  margin: 0;
 }
 
 h1 {
@@ -228,7 +228,7 @@ dl#commit-tooltip {
   top: 1em;
   left: 1em;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: -10px -5px 15px rgb(141, 141, 141);;
+  box-shadow: -10px -5px 15px rgb(141, 141, 141);
   border-radius: 5%;
   padding: 5px;
 }
@@ -237,6 +237,9 @@ circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+  @starting-style {
+    r: 0;
+  }
 }
 
 circle:hover {
@@ -256,4 +259,13 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 circle.selected {
   fill: #ff6b6b;
+}
+
+div#time-slide {
+  flex: 1;
+  align-items: baseline;
+}
+
+time#commit-time {
+  margin-left: auto;
 }
