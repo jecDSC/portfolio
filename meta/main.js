@@ -367,6 +367,33 @@ let commitMaxTime = timeScale.invert(commitProgress);
 const timeSlider = document.querySelector("#commit-progress");
 const timeDisplay = document.querySelector("#commit-time");
 
+// Will get updated as user changes slider
+let filteredCommits = commits;
+function updateFileDisplay(filteredCommits) {
+  let lines = filteredCommits.flatMap((d) => d.lines);
+  let files = d3
+    .groups(lines, (d) => d.file)
+    .map(([name, lines]) => {
+      return { name, lines };
+    });
+
+  let filesContainer = d3
+    .select("#files")
+    .selectAll("div")
+    .data(files, (d) => d.name)
+    .join(
+      // This code only runs when the div is initially rendered
+      (enter) =>
+        enter.append("div").call((div) => {
+          div.append("dt").append("code");
+          div.append("dd");
+        })
+    );
+
+  filesContainer.select("dt > code").text((d) => d.name);
+  filesContainer.select("dd").text((d) => `${d.lines.length} lines`);
+}
+
 function onTimeSliderChange() {
   commitProgress = timeSlider.value;
   commitMaxTime = timeScale.invert(commitProgress);
@@ -376,10 +403,12 @@ function onTimeSliderChange() {
   });
   filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
 }
 
-// Will get updated as user changes slider
-let filteredCommits = commits;
+// // This code updates the div info
+// filesContainer.select("dt > code").text((d) => d.name);
+// filesContainer.select("dd").text((d) => `${d.lines.length} lines`);
 
 timeSlider.addEventListener("input", onTimeSliderChange);
 onTimeSliderChange();

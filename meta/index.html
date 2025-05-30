@@ -37,6 +37,16 @@
         Show commits until:
         <input type="range" id="commit-progress" min="0" max="100" />
         <time id="commit-time"></time>
+        <dl id="files">
+          <!-- we want the following structure for each file:
+  <div>
+    <dt>
+      <code>{file.name}</code>
+    </dt>
+    <dd>{file.lines.length} lines</dd>
+  </div>
+  -->
+        </dl>
       </label>
     </div>
   </body>
