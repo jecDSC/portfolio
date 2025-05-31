@@ -328,6 +328,7 @@ dd.dots {
   left: 0;
   bottom: auto;
   height: 50vh;
+  padding: 20px;
 }
 
 div.step {

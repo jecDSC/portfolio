@@ -440,16 +440,16 @@ d3.select("#scatter-story")
       timeStyle: "short",
     })},
 		I made <a href="${d.url}" target="_blank">${
-      i > 0 ? "another glorious commit" : "my first commit, and it was glorious"
+      i > 0 ? "another last-minute commit" : "my first last-minute commit"
     }</a>.
-		I edited ${d.totalLines} lines across ${
+		I edited ${d.totalLines} line(s) across ${
       d3.rollups(
         d.lines,
         (D) => D.length,
         (d) => d.file
       ).length
-    } files.
-		Then I looked over all I had made, and I saw that it was very good.
+    } file(s).
+		I looked over it several times to make sure I didn't miss anything, and it looked good to me.
 	`
   );
 
