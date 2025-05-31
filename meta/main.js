@@ -301,6 +301,8 @@ function isCommitSelected(selection, commit) {
 }
 
 // Lab 8
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
 function updateScatterPlot(data, commits) {
   const width = 1000;
   const height = 600;
@@ -375,7 +377,8 @@ function updateFileDisplay(filteredCommits) {
     .groups(lines, (d) => d.file)
     .map(([name, lines]) => {
       return { name, lines };
-    });
+    })
+    .sort((a, b) => b.lines.length - a.lines.length);
 
   let filesContainer = d3
     .select("#files")
@@ -391,7 +394,17 @@ function updateFileDisplay(filteredCommits) {
     );
 
   filesContainer.select("dt > code").text((d) => d.name);
-  filesContainer.select("dd").text((d) => `${d.lines.length} lines`);
+  filesContainer
+    .select("dd")
+    .text((d) => `${d.lines.length} lines`)
+    .attr("class", "dots");
+  filesContainer
+    .select("dd")
+    .selectAll("div")
+    .data((d) => d.lines)
+    .join("div")
+    .attr("class", "loc")
+    .attr("style", (d) => `--color: ${colors(d.type)}`);
 }
 
 function onTimeSliderChange() {
@@ -412,3 +425,28 @@ function onTimeSliderChange() {
 
 timeSlider.addEventListener("input", onTimeSliderChange);
 onTimeSliderChange();
+
+d3.select("#scatter-story")
+  .selectAll(".step")
+  .data(commits)
+  .join("div")
+  .attr("class", "step")
+  .html(
+    (d, i) => `
+		On ${d.datetime.toLocaleString("en", {
+      dateStyle: "full",
+      timeStyle: "short",
+    })},
+		I made <a href="${d.url}" target="_blank">${
+      i > 0 ? "another glorious commit" : "my first commit, and it was glorious"
+    }</a>.
+		I edited ${d.totalLines} lines across ${
+      d3.rollups(
+        d.lines,
+        (D) => D.length,
+        (d) => d.file
+      ).length
+    } files.
+		Then I looked over all I had made, and I saw that it was very good.
+	`
+  );
