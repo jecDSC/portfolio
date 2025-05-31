@@ -329,3 +329,7 @@ dd.dots {
   bottom: auto;
   height: 50vh;
 }
+
+div.step {
+  padding: 7px;
+}

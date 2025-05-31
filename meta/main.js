@@ -1,4 +1,5 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
+import scrollama from "https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm";
 
 async function loadData() {
   const data = await d3.csv("loc.csv", (row) => ({
@@ -97,6 +98,7 @@ function renderCommitInfo(data, commits) {
 
 let data = await loadData();
 let commits = processCommits(data);
+commits = d3.sort(commits, (d) => d.datetime);
 
 renderCommitInfo(data, commits);
 
@@ -423,8 +425,8 @@ function onTimeSliderChange() {
 // filesContainer.select("dt > code").text((d) => d.name);
 // filesContainer.select("dd").text((d) => `${d.lines.length} lines`);
 
-timeSlider.addEventListener("input", onTimeSliderChange);
-onTimeSliderChange();
+// timeSlider.addEventListener("input", onTimeSliderChange);
+// onTimeSliderChange();
 
 d3.select("#scatter-story")
   .selectAll(".step")
@@ -450,3 +452,22 @@ d3.select("#scatter-story")
 		Then I looked over all I had made, and I saw that it was very good.
 	`
   );
+
+function onStepEnter(response) {
+  console.log(response.element.__data__.datetime);
+  filteredCommits = commits.filter(
+    (d) => d.datetime <= response.element.__data__.datetime
+  );
+  updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
+}
+
+const scroller = scrollama();
+scroller
+  .setup({
+    container: "#scrolly-1",
+    step: "#scrolly-1 .step",
+  })
+  .onStepEnter(onStepEnter);
+
+// console.log(commits);
